@@ -1,0 +1,144 @@
+/* ============================================================
+   BASE.CSS – Variables globales, reset y configuración inicial
+   Proyecto: IWECOTECH – Rediseño Corporativo Premium
+   ============================================================ */
+
+/* -------------------- Tipografía -------------------- */
+html {
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* -------------------- Variables Globales -------------------- */
+:root {
+    /* Colores corporativos */
+    --verde: #055a30;
+    --verde-sec: #0a7d45;
+    --azul: #060638;
+    --gris: #6f6f6f;
+    --gris-claro: #f5f5f5;
+    --blanco: #ffffff;
+
+    /* Gradientes corporativos */
+    --gradient-verde: linear-gradient(135deg, #055a30, #0a7d45);
+    --gradient-azul: linear-gradient(135deg, #060638, #055a30);
+
+    /* Sombra corporativa */
+    --shadow-soft: 0 4px 14px rgba(0,0,0,0.08);
+    --shadow-mid: 0 6px 20px rgba(0,0,0,0.12);
+    --shadow-hard: 0 8px 24px rgba(0,0,0,0.18);
+
+    /* Bordes */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 26px;
+
+    /* Espaciados */
+    --space-xs: 6px;
+    --space-sm: 12px;
+    --space-md: 20px;
+    --space-lg: 40px;
+    --space-xl: 70px;
+
+    /* Fuente */
+    --title-size: 2.4rem;
+    --subtitle-size: 1.1rem;
+
+    /* Breakpoints */
+    --max-width: 1250px;
+}
+
+/* -------------------- Reset Premium -------------------- */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, input, textarea {
+    font-family: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Elimina saltos iniciales */
+body {
+    background: var(--gris-claro);
+    color: var(--azul);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Contenedor estándar */
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Secciones */
+.section {
+    padding: var(--space-xl) 0;
+}
+
+.section-light {
+    background: #eaf6ef;
+    padding: var(--space-xl) 0;
+}
+
+/* Títulos generales */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--azul);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gris);
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+/* Utilidades */
+.text-center { text-align: center; }
+.text-light { color: var(--blanco); }
+.w-100 { width: 100%; }
+
+/* Espaciados verticales reutilizables */
+.mt-1 { margin-top: 10px; }
+.mt-2 { margin-top: 20px; }
+.mt-3 { margin-top: 30px; }
+.mt-4 { margin-top: 40px; }
+.mt-5 { margin-top: 60px; }
+
+/* Sombra utilitaria */
+.shadow-soft { box-shadow: var(--shadow-soft); }
+.shadow-mid { box-shadow: var(--shadow-mid); }
+
+/* Scrollbar moderna */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--verde);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #dcdcdc;
+}
+
+
