@@ -1,10 +1,7 @@
 // =========================
 // CONFIG
 // =========================
-const API_URL ="https://script.google.com/macros/s/AKfycbwylyQ64MrTjUz26kDQvWx2dC8gtecuvJvlLt0lueXyj9eRRLzbeDKRlqsSFsLfXQRbeA/exec";
-
-// Año dinámico
-document.getElementById("year").textContent = new Date().getFullYear();
+const API_URL = "https://script.google.com/macros/s/AKfycbwylyQ64MrTjUz26kDQvWx2dC8gtecuvJvlLt0lueXyj9eRRLzbeDKRlqsSFsLfXQRbeA/exec";
 
 // Elementos
 const form = document.getElementById("formCert");

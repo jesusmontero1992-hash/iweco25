@@ -368,3 +368,56 @@ i {
         flex-wrap: wrap;
     }
 }
+
+
+/* SUBMENÚ GENERAL */
+.navbar-menu .submenu {
+    position: relative;
+}
+
+/* SUBMENÚ DESKTOP (APARECE AL PASAR EL MOUSE) */
+.navbar-menu .submenu-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--blanco);
+    box-shadow: var(--shadow-mid);
+    border-radius: var(--radius-sm);
+    padding: 10px 0;
+    display: none;
+    z-index: 999;
+}
+
+.navbar-menu .submenu:hover .submenu-items {
+    display: block;
+}
+
+/* SUBMENÚ – ITEMS */
+.submenu-items a {
+    display: block;
+    padding: 10px 18px;
+    white-space: nowrap;
+    color: var(--azul);
+    font-weight: 500;
+}
+
+.submenu-items a:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 820px) {
+
+    /* El submenú debe mostrarse dentro del menú móvil */
+    .navbar-menu .submenu-items {
+        position: relative;
+        box-shadow: none;
+        background: var(--blanco);
+        padding-left: 20px;
+    }
+
+    .navbar-menu .submenu:hover .submenu-items {
+        display: block;
+    }
+}

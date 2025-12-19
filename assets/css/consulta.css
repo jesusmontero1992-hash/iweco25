@@ -51,7 +51,7 @@ body.exit,
 
 .cert-form input:focus {
     border-color: var(--verde);
-    box-shadow: 0 0 0 3px rgba(5,90,48,0.15);
+    box-shadow: 0 0 0 3px rgba(5, 90, 48, 0.15);
 }
 
 .cert-form button {
@@ -173,18 +173,46 @@ body.exit,
    =========================================================== */
 
 @media (max-width: 768px) {
+    .cert-section-box {
+        padding: 20px;
+        /* Reducir espacio interno del contenedor */
+    }
+
     .result-card {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 20px 15px;
     }
 
-    .qr-box {
-        margin-top: 15px;
+    .result-details {
+        width: 100%;
     }
 
     .result-details .item {
-        text-align: left;
+        text-align: center;
+        /* Centrar textos para mejor estética en móvil */
+        font-size: 0.95rem;
+    }
+
+    .qr-box {
+        margin-top: 20px;
+        width: 130px;
+        /* Tamaño del QR ajustado */
+        height: 130px;
+    }
+
+    .acciones-cert {
+        flex-direction: column;
+        /* Botones uno debajo del otro */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-accion {
+        width: 100%;
+        /* Botones ocupan todo el ancho */
+        padding: 14px;
     }
 }
 
@@ -200,4 +228,18 @@ body.exit,
 .no-transition html {
     animation: none !important;
     opacity: 1 !important;
+}
+
+
+/* ===========================================================
+   8. FIX MENU MOVIL - Que no tape el formulario
+   =========================================================== */
+@media (max-width: 850px) {
+
+    /* Forzamos que el menú deslice bien */
+    .navbar-menu {
+        top: 100% !important;
+        /* Justo debajo del navbar */
+        z-index: 999;
+    }
 }

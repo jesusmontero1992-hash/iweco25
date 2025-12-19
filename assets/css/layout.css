@@ -15,11 +15,33 @@
     z-index: 500;
 }
 
+@media (max-width: 820px) {
+
+    html,
+    body {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .navbar-wrapper {
+        position: relative !important;
+        /* Ahora el menú se desplaza con la página en todo el sitio */
+        top: 0 !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--space-sm) 0;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-logo img {
@@ -98,21 +120,35 @@
         display: block;
     }
 
+    /* Reducir altura y dar margen para que el logo no toque los bordes */
+    .navbar {
+        padding: 6px 0 !important;
+        /* Pequeño espacio arriba y abajo */
+        min-height: auto !important;
+    }
+
+    .navbar-logo img {
+        height: 26px !important;
+        /* Logo un poco más pequeño para que respire */
+    }
+
     .navbar-menu {
         position: absolute;
         top: 100%;
         right: 0;
         background: var(--blanco);
         flex-direction: column;
-        width: 220px;
-        padding: 25px 0;
-        gap: 20px;
+        width: 170px;
+        padding: 5px 0 20px 0;
+        /* Menos espacio arriba */
+        gap: 15px;
         transform: translateX(120%);
         transition: 0.3s ease;
         box-shadow: var(--shadow-mid);
+        border-bottom-left-radius: var(--radius-lg);
     }
 
-    .nav-toggle:checked ~ .navbar-menu {
+    .nav-toggle:checked~.navbar-menu {
         transform: translateX(0);
     }
 }
@@ -125,7 +161,8 @@
     grid-template-columns: 1.1fr 1fr;
     align-items: center;
     gap: var(--space-lg);
-    margin-top: 120px;
+    margin-top: 0;
+    /* Eliminado el duplicado, lo maneja el container */
     padding-bottom: var(--space-xl);
 }
 
@@ -164,7 +201,15 @@
         order: -1;
     }
 
-    .hero-title { font-size: 2.2rem; }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    /* Reducir separación en móvil ya que el menú es relativo */
+    .hero-dual {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+    }
 }
 
 
@@ -260,7 +305,7 @@
 .footer-content {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     text-align: center;
     gap: 18px;
 }
@@ -269,8 +314,10 @@
 
 .footer-left {
     max-width: 380px;
-    text-align: center;       /* Centra texto y logo */
-    margin: 0 auto;           /* Asegura centrado del bloque */
+    text-align: center;
+    /* Centra texto y logo */
+    margin: 0 auto;
+    /* Asegura centrado del bloque */
 }
 
 

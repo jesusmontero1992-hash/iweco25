@@ -208,25 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* ============================================================
-   9. MINI CHAT WHATSAPP
-   ============================================================ */
-document.addEventListener("DOMContentLoaded", () => {
-    const floatBtn = document.getElementById("whatsappFloat");
-    const chatBox = document.getElementById("whatsappChat");
-    const chatClose = document.getElementById("chatClose");
-
-    if (!floatBtn) return;
-
-    floatBtn.addEventListener("click", e => {
-        e.preventDefault();
-        chatBox.classList.toggle("show");
-    });
-
-    chatClose.addEventListener("click", () => chatBox.classList.remove("show"));
-});
-
-
-/* ============================================================
    10. FORMULARIO AJAX
    ============================================================ */
 const form = document.getElementById("contactForm");
@@ -241,13 +222,13 @@ if (form) {
             method: "POST",
             body: new FormData(form)
         })
-        .then(res => res.text())
-        .then(data => {
-            msg.innerText = data.includes("OK") ?
-                "¡Mensaje enviado correctamente!" :
-                "Hubo un error al enviar el mensaje.";
-            if (data.includes("OK")) form.reset();
-        });
+            .then(res => res.text())
+            .then(data => {
+                msg.innerText = data.includes("OK") ?
+                    "¡Mensaje enviado correctamente!" :
+                    "Hubo un error al enviar el mensaje.";
+                if (data.includes("OK")) form.reset();
+            });
     });
 }
 
@@ -272,47 +253,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const legalBanner = document.getElementById("legalBanner");
     const acceptLegal = document.getElementById("acceptLegal");
 
-    if (localStorage.getItem("legalAccepted") === "yes") {
-        legalBanner.style.display = "none";
-    }
+    if (legalBanner && acceptLegal) {
+        if (localStorage.getItem("legalAccepted") !== "yes") {
+            legalBanner.style.display = "flex";
+        }
 
-    acceptLegal.addEventListener("click", () => {
-        legalBanner.style.display = "none";
-        localStorage.setItem("legalAccepted", "yes");
-    });
+        acceptLegal.addEventListener("click", () => {
+            legalBanner.style.display = "none";
+            localStorage.setItem("legalAccepted", "yes");
+        });
+    }
 });
+
+
+
 
 
 /* ============================================================
-   13. CONTROL UNIFICADO — REDES + WHATSAPP + LEGAL
+   13. AÑO AUTOMÁTICO (FOOTER)
    ============================================================ */
-document.addEventListener("DOMContentLoaded", () => {
-
-    const socialBar = document.querySelector(".floating-social");
-    const whatsappBtn = document.getElementById("whatsappFloat");
-    const chatBox = document.getElementById("whatsappChat");
-
-    if (!socialBar || !whatsappBtn) return;
-
-    function updateFloatingButtons() {
-        const aceptado = localStorage.getItem("legalAccepted") === "yes";
-
-        if (!aceptado) {
-            socialBar.classList.add("show");
-            whatsappBtn.classList.add("show");
-            return;
-        }
-
-        if (window.scrollY > 120) {
-            socialBar.classList.add("show");
-            whatsappBtn.classList.add("show");
-        } else {
-            socialBar.classList.remove("show");
-            whatsappBtn.classList.remove("show");
-            chatBox.classList.remove("show");
-        }
+function updateYear() {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
     }
+}
 
-    updateFloatingButtons();
-    window.addEventListener("scroll", updateFloatingButtons);
-});
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", updateYear);
+} else {
+    updateYear();
+}
