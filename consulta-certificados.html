@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +19,10 @@
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/consulta.css">
+    <link rel="stylesheet" href="assets/css/fix-responsive.css">
+
+    <link rel="canonical" href="https://tusitio.com">
+
 
     <!-- DESACTIVAR TRANSICIÓN SOLO EN ESTA PÁGINA -->
     <style>
@@ -30,7 +35,8 @@
             animation: none !important;
         }
 
-        html, body {
+        html,
+        body {
             animation: none !important;
             opacity: 1 !important;
         }
@@ -40,119 +46,113 @@
 
 <body>
 
-<!-- =========================== NAVBAR =========================== -->
-<header class="navbar-wrapper">
-    <nav class="container navbar">
-        <a href="index.html" class="navbar-logo">
-            <img src="assets/img/logo-principal.png" alt="IWECOTECH Logo">
-        </a>
+    <!-- =========================== NAVBAR =========================== -->
+    <header class="navbar-wrapper">
+        <nav class="container navbar">
+            <a href="index.html" class="navbar-logo">
+                <img src="assets/img/logo-principal.png" alt="IWECOTECH Logo">
+            </a>
 
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
 
-        <ul class="navbar-menu">
+            <ul class="navbar-menu">
 
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="empresa.html">Empresa</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="capacitacion.html">Capacitación</a></li>
+                <li><a href="consulta-certificados.html" class="btn-cert">Certificados</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
 
-            <!-- SUBMENÚ DE CAPACITACIÓN -->
-            <li class="submenu">
-                <a href="capacitacion.html">Capacitación</a>
-
-                <ul class="submenu-items">
-                    <li><a href="capacitacion.html">Programas de Capacitación</a></li>
-                    <li><a href="consulta-certificados.html" class="active">Consulta de Certificados</a></li>
-                </ul>
-            </li>
-
-            <li><a href="contacto.html">Contáctanos</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- =========================== HERO PREMIUM =========================== -->
-<section class="hero-fixed container hero-gradient hero-centered">
-
-    <div class="hero-text fade-text text-center">
-        <h1 class="hero-title">
-            Consulta de Certificados Oficiales IWECOTECH
-        </h1>
-        <p class="hero-subtitle">
-            Verifica la vigencia y autenticidad ingresando la cédula del operador.
-        </p>
-    </div>
-
-</section>
-
-<!-- =========================== FORMULARIO =========================== -->
-<section class="section container">
-
-    <div class="cert-section-box">
-
-        <form id="formCert" class="cert-form">
-            <label for="cedula">Cédula de Identidad</label>
-
-            <input 
-                type="text" 
-                id="cedula" 
-                name="cedula" 
-                placeholder="Ej: 12345678" 
-                required 
-            />
-
-            <button class="btn-primary w-100" type="submit">
-                Consultar Certificado
-            </button>
-        </form>
-
-        <div id="resultado" class="result-area" aria-live="polite"></div>
-
-    </div>
-
-</section>
-
-<!-- =========================== FOOTER =========================== -->
-<footer class="footer">
-    <div class="container footer-content">
-
-        <img src="assets/img/logo-blanco.png" alt="IWECOTECH" class="footer-logo">
-
-        <p class="footer-text">
-            Isulation, Worcover, Engineering, Consulting & High Techonologies C.A
-        </p>
-
-       <p class="footer-copy">
-       © <span id="year"></span> IWECOTECH · Todos los derechos reservados
-       </p>
-
-
-    </div>
-</footer>
-
-<script>
-// ELIMINAR TODA TRANSICIÓN DE PÁGINA SOLO AQUÍ
-
-document.addEventListener("DOMContentLoaded", () => {
-    
-    // Buscar TODOS los listeners agregados por main.js
-    const links = document.querySelectorAll("a[href]");
-
-    links.forEach(link => {
-        const nuevo = link.cloneNode(true);   // Clonar sin listeners
-        link.parentNode.replaceChild(nuevo, link); // Reemplazar
-    });
-
-    // Evitar que cualquier clic active la transición
-    document.body.classList.add("no-transition");
-});
-</script>
+            </ul>
 
 
 
-<!-- =========================== SCRIPTS =========================== -->
-<script src="assets/js/app.js"></script>
-<script src="assets/js/main.js"></script>
+        </nav>
+    </header>
+
+    <!-- =========================== HERO PREMIUM =========================== -->
+    <section class="hero-fixed container hero-gradient hero-centered">
+
+        <div class="hero-text fade-text text-center">
+            <h1 class="hero-title">
+                Consulta de Certificados Oficiales IWECOTECH
+            </h1>
+            <p class="hero-subtitle">
+                Verifica la vigencia y autenticidad ingresando la cédula del operador.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- =========================== FORMULARIO =========================== -->
+    <section class="section container">
+
+        <div class="cert-section-box">
+
+            <form id="formCert" class="cert-form">
+                <label for="cedula">Cédula de Identidad</label>
+
+                <input type="text" id="cedula" name="cedula" placeholder="Ej: 12345678" required />
+
+                <button class="btn-primary w-100" type="submit">
+                    Consultar Certificado
+                </button>
+            </form>
+
+            <div id="resultado" class="result-area" aria-live="polite"></div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================== FOOTER =========================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <img src="assets/img/logo-blanco.png" alt="IWECOTECH" class="footer-logo">
+
+            <p class="footer-text">
+                Insulation, Workover, Engineering, Consulting & High Technologies C.A
+            </p>
+
+            <p class="footer-copy">
+                © <span id="year"></span> IWECOTECH · Todos los derechos reservados
+            </p>
+
+
+        </div>
+    </footer>
+
+    <script>
+        // ELIMINAR TODA TRANSICIÓN DE PÁGINA SOLO AQUÍ
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Buscar TODOS los listeners agregados por main.js
+            const links = document.querySelectorAll("a[href]");
+
+            links.forEach(link => {
+                const nuevo = link.cloneNode(true);   // Clonar sin listeners
+                link.parentNode.replaceChild(nuevo, link); // Reemplazar
+            });
+
+            // Evitar que cualquier clic active la transición
+            document.body.classList.add("no-transition");
+
+            // FORZAR AÑO EN EL FOOTER
+            const yearSpan = document.getElementById("year");
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+        });
+    </script>
+
+
+
+    <!-- =========================== SCRIPTS =========================== -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>

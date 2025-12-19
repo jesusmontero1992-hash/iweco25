@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +8,7 @@
 
     <!-- Tipografía -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+
 
     <!-- Iconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -19,215 +20,190 @@
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/contacto.css">
+    <link rel="stylesheet" href="assets/css/fix-responsive.css">
 
+
+    <link rel="canonical" href="https://tusitio.com">
 </head>
 
 <body>
 
-<!-- =========================== NAVBAR =========================== -->
-<header class="navbar-wrapper">
-    <nav class="container navbar">
-        <a href="index.html" class="navbar-logo">
-            <img src="assets/img/logo-principal.png" alt="IWECOTECH Logo">
-        </a>
+    <!-- =========================== NAVBAR =========================== -->
+    <header class="navbar-wrapper">
+        <nav class="container navbar">
+            <a href="index.html" class="navbar-logo">
+                <img src="assets/img/logo-principal.png" alt="IWECOTECH Logo">
+            </a>
 
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
 
-        <ul class="navbar-menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="empresa.html">Empresa</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="capacitacion.html">Capacitación</a></li>
-    <li><a href="contacto.html" class="active">Contáctanos</a></li>
-</ul>
+            <ul class="navbar-menu">
 
-    </nav>
-</header>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="capacitacion.html">Capacitación</a></li>
+                <li><a href="consulta-certificados.html" class="btn-cert">Certificados</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
 
-
-<!-- =========================== HERO CONTACTO =========================== -->
-<section class="hero-fixed container hero-gradient hero-contact-centered">
-
-    <div class="hero-text fade-text text-center">
-        <h1 class="hero-title">
-           Atención Técnica y Comercial para la Industria Venezolana
-        </h1>
-        <p class="hero-subtitle">
-         Comunícate con nuestro equipo y recibe asesoría especializada en inspección, certificación, calibración y capacitación industrial.
-        </p>
-    </div>
-
-</section>
-
-<!-- =========================== FORMULARIO =========================== -->
-<section class="section container fade-in">
-    <h2 class="section-title">Envíanos tu Mensaje</h2>
-    <p class="section-subtitle">Responde con tus datos y un asesor especializado se comunicará contigo.</p>
-
-    <div class="contact-grid">
-
-        <!-- FORMULARIO -->
-        <div class="contact-form shadow-soft">
-            <h3>Formulario de Contacto</h3>
-
-            <form action="send_mail.php" method="POST" id="contactForm">
-
-    <input type="text" name="nombre" placeholder="Nombre y Apellido" required minlength="3">
-
-    <input type="email" name="email" placeholder="Correo Electrónico" required>
-
-    <input type="text" name="telefono" placeholder="Número Telefónico" required pattern="[0-9+\s-]{6,}">
-
-    <input type="text" name="empresa" placeholder="Empresa (Opcional)">
-
-    <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required minlength="10"></textarea>
-
-    <button class="btn-primary w-100" type="submit">Enviar Mensaje</button>
-
-</form>
-
-<p id="formMessage" class="text-center" style="margin-top:10px;"></p>
-
-        </div>
-
-        <!-- INFORMACIÓN DE CONTACTO -->
-        <div class="contact-info">
-            <h2 class="text-verde">Información Comercial</h2>
-
-            <ul class="contact-list">
-                <li><i class="bi bi-envelope-fill"></i> Iwecotech@gmail.com</li>
-                <li><i class="bi bi-whatsapp"></i> +58 (424) 618.16.74 <br> +58 (424) 680.45.59 <br> +58 (412) 161.91.35</li>
-                <li><i class="bi bi-geo-alt-fill"></i> C.C Amal ,2do Piso, Locales 22 - 23 - 24 <br>Cabimas – Estado Zulia, Venezuela</li>
-                
             </ul>
 
-            <h2 class="text-verde mt-3">Horarios de Atención</h2>
-            <p>Lunes a Viernes: 8:00 AM – 5:00 PM</p>
-            
-            <h2 class="text-verde mt-3">Síguenos en Redes Sociales</h2>
 
-<div class="contact-social-icons">
-    <a href="https://www.facebook.com/TUPAGINA" target="_blank"><i class="bi bi-facebook"></i></a>
-    <a href="https://www.instagram.com/TUPAGINA" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://www.linkedin.com/TUPAGINA" target="_blank"><i class="bi bi-linkedin"></i></a>
-</div>
 
+        </nav>
+    </header>
+
+
+    <!-- =========================== HERO CONTACTO =========================== -->
+    <section class="hero-fixed container hero-gradient hero-contact-centered">
+
+        <div class="hero-text fade-text text-center">
+            <h1 class="hero-title">
+                Atención Técnica y Comercial para la Industria Venezolana
+            </h1>
+            <p class="hero-subtitle">
+                Comunícate con nuestro equipo y recibe asesoría especializada en inspección, certificación, calibración
+                y capacitación industrial.
+            </p>
         </div>
 
-    </div>
-</section>
+    </section>
 
-<!-- ====================== REPRESENTANTES Y SUCURSALES ====================== -->
-<section class="section container fade-in">
-    <h2 class="section-title">Nuestros Representantes y Sucursales</h2>
-    <p class="section-subtitle">Puntos de contacto oficiales para atención comercial y técnica.</p>
+    <!-- =========================== FORMULARIO =========================== -->
+    <section class="section container fade-in">
+        <h2 class="section-title">Envíanos tu Mensaje</h2>
+        <p class="section-subtitle">Responde con tus datos y un asesor especializado se comunicará contigo.</p>
 
-    <div class="rep-grid">
+        <div class="contact-grid">
 
-        <!-- REPRESENTANTE 1 -->
-        <div class="rep-card">
-            <h3 class="rep-title">Región Oriente</h3>
+            <!-- FORMULARIO -->
+            <div class="contact-form shadow-soft">
+                <h3>Formulario de Contacto</h3>
 
-            <ul class="rep-list">
-                <li><i class="bi bi-person-fill"></i> Ing. Grabiel Granado</li>
-                <li><i class="bi bi-telephone-fill"></i> +58 (426) 583 0823</li>
-            </ul>
+                <form action="send_mail.php" method="POST" id="contactForm">
 
-            <p class="rep-subtitle">Sucursal Puerto La Cruz - Venezuela</p>
-            <p class="rep-location"><i class="bi bi-geo-alt-fill"></i>Anzoátegui, capital del municipio Sotillo.</p>
+                    <input type="text" name="nombre" placeholder="Nombre y Apellido" required minlength="3">
+
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+
+                    <input type="text" name="telefono" placeholder="Número Telefónico" required pattern="[0-9+\s-]{6,}">
+
+                    <input type="text" name="empresa" placeholder="Empresa (Opcional)">
+
+                    <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required
+                        minlength="10"></textarea>
+
+                    <button class="btn-primary w-100" type="submit">Enviar Mensaje</button>
+
+                </form>
+
+                <p id="formMessage" class="text-center" style="margin-top:10px;"></p>
+
+            </div>
+
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <div class="contact-info">
+                <h2 class="text-verde">Información Comercial</h2>
+
+                <ul class="contact-list">
+                    <li><i class="bi bi-envelope-fill"></i> Iwecotech@gmail.com</li>
+                    <li><i class="bi bi-whatsapp"></i> +58 (424) 618.16.74 <br> +58 (424) 680.45.59 <br> +58 (412)
+                        161.91.35</li>
+                    <li><i class="bi bi-geo-alt-fill"></i> C.C Amal ,2do Piso, Locales 22 - 23 - 24 <br>Cabimas – Estado
+                        Zulia, Venezuela</li>
+
+                </ul>
+
+                <h2 class="text-verde mt-3">Horarios de Atención</h2>
+                <p>Lunes a Viernes: 8:00 AM – 5:00 PM</p>
+
+                <h2 class="text-verde mt-3">Síguenos en Redes Sociales</h2>
+
+                <div class="contact-social-icons">
+                    <a href="https://www.facebook.com/TUPAGINA" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/TUPAGINA" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/TUPAGINA" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+
+            </div>
+
         </div>
+    </section>
 
-        <!-- REPRESENTANTE 2 -->
-        <div class="rep-card">
-            <h3 class="rep-title">Región Andina</h3>
+    <!-- ====================== REPRESENTANTES Y SUCURSALES ====================== -->
+    <section class="section container fade-in">
+        <h2 class="section-title">Nuestros Representantes y Sucursales</h2>
+        <p class="section-subtitle">Puntos de contacto oficiales para atención comercial y técnica.</p>
 
-            <ul class="rep-list">
-                <li><i class="bi bi-person-fill"></i>Lic. Ines Vargas</li>
-                <li><i class="bi bi-telephone-fill"></i> +57 (321) 490 5831</li>
-            </ul>
+        <div class="rep-grid">
 
-            <p class="rep-subtitle">Sucursal Bogota - Colombia</p>
-            <p class="rep-location"><i class="bi bi-geo-alt-fill"></i>Distrito Capital</p>
+            <!-- REPRESENTANTE 1 -->
+            <div class="rep-card">
+                <h3 class="rep-title">Región Oriente</h3>
+
+                <ul class="rep-list">
+                    <li><i class="bi bi-person-fill"></i> Ing. Grabiel Granado</li>
+                    <li><i class="bi bi-telephone-fill"></i> +58 (426) 583 0823</li>
+                </ul>
+
+                <p class="rep-subtitle">Sucursal Puerto La Cruz - Venezuela</p>
+                <p class="rep-location"><i class="bi bi-geo-alt-fill"></i>Anzoátegui, capital del municipio Sotillo.</p>
+            </div>
+
+            <!-- REPRESENTANTE 2 -->
+            <div class="rep-card">
+                <h3 class="rep-title">Región Andina</h3>
+
+                <ul class="rep-list">
+                    <li><i class="bi bi-person-fill"></i>Lic. Ines Vargas</li>
+                    <li><i class="bi bi-telephone-fill"></i> +57 (321) 490 5831</li>
+                </ul>
+
+                <p class="rep-subtitle">Sucursal Bogota - Colombia</p>
+                <p class="rep-location"><i class="bi bi-geo-alt-fill"></i>Distrito Capital</p>
+            </div>
+
         </div>
-
-    </div>
-</section>
+    </section>
 
 
-<!-- =========================== MAPA =========================== -->
-<section class="section container fade-in">
-    <h2 class="section-title">Ubicación</h2>
-    <p class="section-subtitle">Encuéntranos fácilmente en nuestra sede principal.</p>
+    <!-- =========================== MAPA =========================== -->
+    <section class="section container fade-in">
+        <h2 class="section-title">Ubicación</h2>
+        <p class="section-subtitle">Encuéntranos fácilmente en nuestra sede principal.</p>
 
-    <div class="rounded-lg shadow-soft" style="overflow:hidden;">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.3867793112636!2d-71.472518!3d10.390823300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89c7d24782c311%3A0x6b76ea58937b821d!2sIWECOTECH!5e0!3m2!1ses!2sus!4v1765821383284!5m2!1ses!2sus" 
-            width="100%" 
-            height="400" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
-    </div>
-</section>
-
-
-
-<!-- =========================== FOOTER =========================== -->
-<footer class="footer">
-    <div class="container text-center">
-        <img src="assets/img/logo-blanco.png" class="footer-logo">
-
-        <p class="footer-text mt-2">
-            Isulation, Worcover, Engineering, Consulting & High Techonologies C.A
-        </p>
-
-        <p class="footer-copy mt-2">© 2024 IWECOTECH – Todos los derechos reservados.</p>
-    </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
-
-<link rel="canonical" href="https://tusitio.com">
-
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<div class="whatsapp-widget">
-    <a href="#" class="whatsapp-float" id="whatsappFloat">
-        <i class="bi bi-whatsapp"></i>
-    </a>
-
-    <!-- MINI CHAT -->
-    <div class="whatsapp-chat-box" id="whatsappChat">
-        <div class="chat-header">
-            <i class="bi bi-whatsapp"></i>
-            <span>Atención IWECOTECH</span>
-            <button class="chat-close" id="chatClose">&times;</button>
+        <div class="rounded-lg shadow-soft" style="overflow:hidden;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.3867793112636!2d-71.472518!3d10.390823300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89c7d24782c311%3A0x6b76ea58937b821d!2sIWECOTECH!5e0!3m2!1ses!2sus!4v1765821383284!5m2!1ses!2sus"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
         </div>
+    </section>
 
-        <div class="chat-body">
-            <p class="chat-msg">
-                ¡Hola! 👋<br>
-                ¿En qué podemos ayudarte hoy?
+
+
+    <!-- =========================== FOOTER =========================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <img src="assets/img/logo-blanco.png" alt="IWECOTECH" class="footer-logo">
+
+            <p class="footer-text">
+                Insulation, Workover, Engineering, Consulting & High Technologies C.A
             </p>
 
-            <a href="https://wa.me/580000000000?text=Hola,%20necesito%20más%20información." 
-               target="_blank" 
-               class="chat-btn">
-                Enviar mensaje
-            </a>
+            <p class="footer-copy">
+                © <span id="year"></span> IWECOTECH · Todos los derechos reservados
+            </p>
+
+
         </div>
-    </div>
-</div>
+    </footer>
 
-<!-- BOTONES FLOTANTES DE REDES -->
-<div class="floating-social">
-    <a href="https://www.facebook.com/TUPAGINA" target="_blank"><i class="bi bi-facebook"></i></a>
-    <a href="https://www.instagram.com/TUPAGINA" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://www.linkedin.com/TUPAGINA" target="_blank"><i class="bi bi-linkedin"></i></a>
-</div>
-
+    <script src="assets/js/main.js"></script>
 
 
 </body>
+
 </html>

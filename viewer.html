@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Certificado – IWECOTECH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        background: #000;
+        font-family: "Inter", sans-serif;
+        user-select: none;
+        overflow: hidden;
+    }
+
+    /* Barra superior */
+    .viewer-header {
+        background: linear-gradient(135deg, #060638 0%, #055a30 100%);
+        color: white;
+        padding: 20px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* CENTRA EL TÍTULO */
+        position: relative;      /* permite centrar sin afectar el logo */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    }
+
+    /* Logo */
+    .viewer-logo {
+        position: absolute;
+        left: 20px;      /* mantiene logo a la izquierda */
+        height: 40px;
+    }
+
+    /* Título centrado */
+    .viewer-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        user-select: none;
+    }
+
+    iframe {
+        width: 100vw;
+        height: calc(100vh - 65px);
+        border: none;
+        background: black;
+        pointer-events: auto;
+    }
+</style>
+
+</head>
+
+<body oncontextmenu="return false">
+
+<header class="viewer-header">
+    <img src="assets/img/logo-blanco.png" class="viewer-logo" alt="IWECOTECH">
+
+    <span class="viewer-title">Certificado – Vista Segura</span>
+</header>
+
+<iframe id="visorPDF" sandbox="allow-scripts allow-same-origin"></iframe>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    let pdf = params.get("pdf");
+
+    if (!pdf) {
+        alert("No se recibió archivo PDF.");
+    }
+
+    pdf = pdf.replace("/view", "/preview");
+    document.getElementById("visorPDF").src = pdf;
+
+    /* BLOQUEOS */
+    document.addEventListener("keydown", function(e) {
+        if (
+            e.key === "PrintScreen" ||
+            (e.ctrlKey && ["p","s","c","u"].includes(e.key)) ||
+            e.key === "F12"
+        ) {
+            e.preventDefault();
+            alert("Función bloqueada.");
+        }
+    });
+
+    document.addEventListener("keyup", function(e) {
+        if (e.key === "PrintScreen") {
+            navigator.clipboard.writeText("");
+            alert("Captura bloqueada.");
+        }
+    });
+
+    document.addEventListener("copy", e => e.preventDefault());
+    document.addEventListener("dragstart", e => e.preventDefault());
+</script>
+
+</body>
+</html>
